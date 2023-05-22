@@ -1,0 +1,33 @@
+:root{
+    --button-background: rgb(72, 3, 132);
+    --button-text: white;
+
+}
+
+body{
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header p{
+    
+}
+
+header a{
+    text-decoration: none;
+    font-size: large;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+

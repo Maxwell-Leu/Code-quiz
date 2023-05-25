@@ -1,6 +1,8 @@
 var timerEl = document.querySelector(".timer");
 var welcomeEl = document.querySelector(".welcome");
 var questionEl = document.querySelector(".question");
+var submitButton = document.getElementById("submit");
+var userInfo = document.getElementById("user_initaials");
 var timeLeft = 75;
 var currentQuestion = -1;
 var questionsAnswered = 0;
@@ -70,3 +72,17 @@ function correctAnswer(){
     }else
         changeQuestion();
 }
+
+function submitHighscore(){
+
+}
+
+submitButton.addEventListener("click", function(event){
+    event.preventDefault();
+    var user_score = {
+        initails: userInfo.value,
+        score: timeLeft
+    }
+
+    localStorage.setItem("user_score", JSON.stringify(user_score));
+})

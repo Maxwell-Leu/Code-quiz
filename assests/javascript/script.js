@@ -11,17 +11,17 @@ var questions =[
         answer: "3"
     },
     {
-        question: "what",
+        question: "what2",
         choices: ["1", "2", "3", "4"],
         answer: "2"
     },
     {
-        question: "what",
+        question: "what3",
         choices: ["1", "2", "3", "4"],
         answer: "1"
     },
     {
-        question: "what",
+        question: "what4",
         choices: ["1", "2", "3", "4"],
         answer: "4"
     }
@@ -50,8 +50,13 @@ function changeQuestion(){
                 questionEl.children[i + 1].textContent = questions[questionsAnswered].choices[i];
             }else{
                 questionEl.children[i + 1].textContent = questions[questionsAnswered].choices[i];
+                questionEl.children[i + 1].setAttribute("onclick", "wrongAnswer()");
             }
-            
         }
     }
+}
+
+function wrongAnswer(){
+    timeLeft-=20;
+    timerEl.textContent = "Timer: " + timeLeft;
 }

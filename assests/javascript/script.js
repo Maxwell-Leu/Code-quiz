@@ -48,15 +48,22 @@ function changeQuestion(){
         for(i = 0; i < 4; i++){
             if(questions[questionsAnswered].choices[i] === questions[questionsAnswered].answer){
                 questionEl.children[i + 1].textContent = questions[questionsAnswered].choices[i];
+                questionEl.children[i + 1].setAttribute("onclick", "correctAnswer()");
             }else{
                 questionEl.children[i + 1].textContent = questions[questionsAnswered].choices[i];
                 questionEl.children[i + 1].setAttribute("onclick", "wrongAnswer()");
             }
         }
+        currentQuestion++;
     }
 }
 
 function wrongAnswer(){
     timeLeft-=20;
     timerEl.textContent = "Timer: " + timeLeft;
+}
+
+function correctAnswer(){
+    questionsAnswered++;
+    changeQuestion();
 }

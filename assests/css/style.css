@@ -1,7 +1,8 @@
 :root{
     --button-background: rgb(72, 3, 132);
     --button-text: white;
-
+    background-color: black;
+    color:white;
 }
 
 header {

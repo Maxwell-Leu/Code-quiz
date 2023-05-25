@@ -3,6 +3,7 @@ var userInfo = JSON.parse(localStorage.getItem("user_score"));
 
 function scoreList(){
     var text = document.createElement("li");
-    text.textContent = userInfo.initails + " " + userInfo.score;
+    var capital = (userInfo.initails)
+    text.textContent = capital.toUpperCase() + "  Score: " + userInfo.score;
     listEl.append(text);
 }

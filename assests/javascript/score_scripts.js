@@ -7,3 +7,9 @@ function scoreList(){
     text.textContent = capital.toUpperCase() + "  Score: " + userInfo.score;
     listEl.append(text);
 }
+
+function storageClear(){
+    localStorage.clear();
+    location.reload();
+    console.log("should be cleared");
+}

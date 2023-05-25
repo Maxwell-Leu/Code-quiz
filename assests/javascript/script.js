@@ -65,5 +65,8 @@ function wrongAnswer(){
 
 function correctAnswer(){
     questionsAnswered++;
-    changeQuestion();
+    if(questionsAnswered == 4){
+        location.replace();
+    }else
+        changeQuestion();
 }

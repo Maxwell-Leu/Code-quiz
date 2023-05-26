@@ -42,8 +42,8 @@ function timer(){
             timeLeft = 0;
             endCard();
             clearInterval(timerInterval);
-        }
-        timeLeft--;
+        }else
+            timeLeft--;
     }, 1000)
 }
 

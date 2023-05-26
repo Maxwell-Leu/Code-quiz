@@ -10,24 +10,24 @@ var questionsAnswered = 0;
 var timerInterval
 var questions =[
     {
-        question: "what",
-        choices: ["1", "2", "3", "4"],
-        answer: "3"
+        question: "Commonly used data types DO NOT include:",
+        choices: ["strings", "boolean", "alerts", "numbers"],
+        answer: "alerts"
     },
     {
-        question: "what2",
-        choices: ["1", "2", "3", "4"],
-        answer: "2"
+        question: "The condition in an if / else statment is enclosed within ___.",
+        choices: ["quotes", "curly brackets", "parentheses", "square brakets"],
+        answer: "parentheses"
     },
     {
-        question: "what3",
-        choices: ["1", "2", "3", "4"],
-        answer: "1"
+        question: "Arrays in JavaScript can be used to store ____.",
+        choices: ["numbers", "strings", "arrays", "all of the above"],
+        answer: "all of the above"
     },
     {
-        question: "what4",
-        choices: ["1", "2", "3", "4"],
-        answer: "4"
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
+        answer: "for loops"
     }
 ];
 
@@ -70,6 +70,8 @@ function changeQuestion(){
 
 function wrongAnswer(){
     timeLeft-=20;
+    if(timeLeft < 0)
+        timeLeft = 0;
     timerEl.textContent = "Timer: " + timeLeft;
 }
 

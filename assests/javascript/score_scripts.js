@@ -11,5 +11,4 @@ function scoreList(){
 function storageClear(){
     localStorage.clear();
     location.reload();
-    console.log("should be cleared");
 }

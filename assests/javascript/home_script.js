@@ -38,7 +38,8 @@ function timer(){
     changeQuestion();
     timerInterval = setInterval(function(){
         timerEl.textContent = "Timer: " + timeLeft;
-        if(timeLeft === 0){
+        if(timeLeft <= 0){
+            timeLeft = 0;
             endCard();
             clearInterval(timerInterval);
         }
@@ -91,7 +92,7 @@ submitButton.addEventListener("click", function(event){
         "initails": userInfo.value,
         "score": timeLeft
     }
-
     localStorage.setItem("user_score", JSON.stringify(user_score));
+    window.location.href="./highscore.html";
 })
 
